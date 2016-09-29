@@ -31,6 +31,7 @@ function GMICMapType(img) {
         var downloadAsset = function(src, callback) {
             if(!this.img) {
                 var img = document.createElement('img');
+                img.setAttribute('crossOrigin', 'anonymous');
                 
                 img.onerror = function() {
                     console.log(src + ' failed to load');
